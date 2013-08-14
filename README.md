@@ -26,6 +26,10 @@ Or install it yourself with:
 
 Put your Mailman config in config/initializers/mailman.rb
 
+````
+Mailman.config.ignore_stdin = true # seems to be necessary when daemonizing
+````
+
 Match Mailman stuff from your models:
 ```
 class Post < ActiveRecord::Base # Or whatever
