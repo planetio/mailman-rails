@@ -23,8 +23,6 @@ namespace :mailman do
         # Use :log_output if you want to debug the daemon itself. We're going to take matters into our own hands:
         $stderr.reopen("#{Rails.root}/log/#{Mailman::Rails.daemon_name}.stdout.log", "w")
         $stdout.reopen("#{Rails.root}/log/#{Mailman::Rails.daemon_name}.stderr.log", "w")
-        warn "Foo"
-        puts "Bar"
         chdir "#{Rails.root}"
         puts "Running daemon command!"
         Rake::Task["mailman"].invoke

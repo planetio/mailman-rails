@@ -1,4 +1,6 @@
 require "rubygems"
+# I think you need to require active_support to get mattr_accessor when running standalone tests(and thus no rails env)
+require 'active_support/core_ext/module/attribute_accessors' 
 require 'mailman'
 require "mailman-rails"
 require "mailman-rails/test_support"
